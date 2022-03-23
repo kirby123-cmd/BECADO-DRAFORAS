@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&family=Sue+Ellen+Francisco&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Caveat:wght@400;500&family=Shojumaru&family=Sue+Ellen+Francisco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Shojumaru&family=Sue+Ellen+Francisco&display=swap');
+body {
+  font-family: sans-serif;
+  background-color:#E7D9EA;
+  box-sizing: border-box;
+  color: #35465d;  
+}
+
+#loading {
+  display: none;
+}
+
+
+
+
+
+
+.file-upload {
+  background-color: #F7E8F6;
+  margin: 0 auto;
+  padding: 15% 3%;
+   border-radius: 10px;
+  border:solid 1.15px #E7D9EA;}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+     width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+   border: 1.5px solid #C1A1D3;
+   position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #D47AE8;
+  border: 0.1px solid #ffffff;
+  
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+  
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 10;
+  text-transform:;
+  color: #D18CE0;
+font-family: 'Courgette', cursive;
+}
+
+.file-upload-image {
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto;
+  padding: 10px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.nav-distance
+{
+    padding: 0.8% ;
+}
+.navbar-brand
+{
+    color:#D47AE8;
+  
+}
+.navbar-light .navbar-toggler
+{
+    background-color:#E7D9EA;
+    border-color:#E7D9EA;
+ 
+}
+.section
+{
+    margin-top:80px;
+}
+.title
+{
+    text-align:center;
+    font-family: 'Shojumaru', cursive;
+    font-family: 'Sue Ellen Francisco', cursive; 
+    font-size:50px;
+    color:#D47AE8;
+}
+.subtitle
+{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Shojumaru', cursive;
+    font-family: 'Sue Ellen Francisco', cursive;
+    text-align:center;
+    font-size:50px;
+    color:#93329E;
+     font-size:30px;
+} 
+@media screen and (max-width: 600px) {
+  html{
+    font-size:10px;
+  }
+    
+    .navbar-brand
+    {
+        font-size:2rem;
+        color:#ffff;
+    }
+}
+.upload-text{
+    font-size:2rem;
+        color:#ffff;
+}
+
+.result-message {
+    font-size: 2rem;
+}
+
+.animal-explain {
+    font-size: 1.5rem;
+}
+.dragon-animal-title {
+    color: #3ba363;
+}
+.rabbit-animal-title {
+    color: #3ba363;
+}
+
+.cat-animal-title {
+    color: #ff6c0a;
+}
+.dog-animal-title {
+    color: #548dd4;
+}
+.squirel-animal-title {
+    color: #e56995;
+}
+
+.bear-animal-title {
+    color: #9b6b43;
+}
+
+.fox-animal-title {
+    color: #31849b;
+}
+
+ .bar-container {
+  height: 2.7rem;
+}
+.dragon-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.dragon-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.squirrel-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.squirrel-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.dog-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.dog-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.cat-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(251, 176, 59, 0.2);
+}
+.cat-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(251, 176, 59, 1);
+}
+.Bear-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(195, 140, 102, 0.2);
+}
+.Bear-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(195, 140, 102, 1);
+}
+.fox-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(49, 132, 155, 0.2);
+}
+.fox-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(49, 132, 155, 1);
+}
+.rabbit-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 166, 190, 0.2);
+}
+.rabbit-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 166, 190, 1);
+}
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.animal-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}

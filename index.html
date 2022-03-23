@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Face Look alike</title>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-623ab23e24857d66"></script>
+
+    </head>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+    ></script>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+            <a class="navbar-brand" href="#">BECADO DRAFORAS</a>
+            <!-- <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!-- <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#"
+                        >Home <span class="sr-only">(current)</span></a
+                    >
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a> -->
+                    <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div> -->
+            <!-- </div> --> 
+        </nav>
+        <section class="section">
+            <h1 class="title">BECADO DRAFORAS</h1>
+            <h2 class="subtitle">Animal face look alike</h2>
+        </section>
+
+            <script
+                class="jsbin"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+            ></script>
+
+            <div class="mt3 container file-upload">
+                <div class="image-upload-wrap">
+                    <input
+                        class="file-upload-input"
+                        type="file"
+                        onchange="readURL(this);"
+                        accept="image/*"
+                    />
+                    <div class="drag-text">
+                        <img src="image/fantasy12.png" alt="" class="mt-5 pt-5 fantasy" />
+                        <h3 class="mb-5 pb-5 pt-4 upload-text">Upload your image here !!!</h3>
+                    </div>
+                </div>
+                <div class="file-upload-content">
+                    <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                   
+                    
+                    <p>
+                        "Please wait for a second "
+                    </p>
+                    <p class="result-message"></p>
+                    <div id="label-container"></div>
+
+                    
+                    
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+                    <div class="image-title-wrap">
+                        <button type="button" onclick="window.location.reload();" >
+                          
+                            <span class="try-again-text">Try again</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+      
+        <section class="mt-10 pt-5 disqus">
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement('script');
+                    s.src = 'https://becado-draforas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        console.log();
+                        predict();
+                        $('#loading').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+
+               <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+               <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+                       <script type="text/javascript">
+        const URL = 'https://teachablemachine.withgoogle.com/models/0ordLaMmG/';
+                let model, webcam, labelContainer, maxPredictions;
+                async function init() {
+                    const modelURL = URL + 'model.json';
+                    const metadataURL = URL + 'metadata.json';
+                    model = await tmImage.load(modelURL, metadataURL);
+                    maxPredictions = model.getTotalClasses();
+                    labelContainer = document.getElementById('label-container');
+                    for (let i = 0; i < maxPredictions; i++) {
+                        var element = document.createElement("div")
+                        element.classList.add("d-flex");
+                        labelContainer.appendChild(element);
+                    }
+                }
+                
+                async function predict() {
+                    var image = document.getElementById('face-image');
+                    const prediction = await model.predict(image, false);
+                    prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultTitle, resultExplain;
+                    switch (prediction[0].className) {
+                        case "dog":
+                            resultTitle =" You got dog "
+                            resultExplain = " you have your own unique way of showing your love and care. you are always there for your loved ones when they need you."
+                            
+                            break;
+                        case "cat":
+                            resultTitle = "you got cat"
+                            resultExplain = "you always make sure that everyone is happy. you are always there for your friends when they need you and you are always willing to help out. you are the type of friend that everyone wants to have."
+                      
+                            break;
+                        case "rabbit":
+                            resultTitle = "you got rabbit"
+                            resultExplain = "people are drawn to your infectious personality. You have a natural charisma and people are naturally drawn to you. You are the life of the party and people love being around you. You are always up for a good time and people appreciate your positive energy."
+                            break;
+                        case "dragon":
+                            resultTitle = "you got dragon"
+                            resultExplain = "You are a beautiful and bold person, always standing up for what you believe in and never backing down from a challenge. You are always looking for new adventures and ways to push yourself, and you always encourage others to do the same. You are confident and charismatic, and people are naturally drawn to your infectious positive attitude."
+                           
+                            break;
+                        case "Bear":
+                            resultTitle = "you got bear "
+                            resultExplain = "You are outgoing and have a likable personality. You make friends easily and people are drawn to you. You have a positive aura that makes people feel good in your presence."
+                            break;
+
+                        case "squirrel":
+                            resultTitle = "You got squirel"
+                            resultExplain = "You are a very active person and you like to stay busy. You are always on the go and you enjoy doing things. You are a very social person and you enjoy being around people. You are a very positive person and you always try to see the best in people."
+                            break;
+                        case "fox":
+                            resultTitle = "You got fox"
+                            resultExplain = "You're so beautiful and smart, you'll create an amazing future for yourself!" 
+                            break;
+                        default:
+                            resultTitle = "you may try "
+                            resultExplain = ""
+                            
+                    }
+                    var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+                var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+                
+                $('.result-message').html(title + explain);
+                var barWidth;
+                for (let i = 0; i < maxPredictions; i++) {
+                    if (prediction[i].probability.toFixed(2) > 0.1) {
+                        barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                    } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                        barWidth = "4%"
+                    } else {
+                        barWidth = "2%"
+                    }
+                    var labelTitle;
+                    switch (prediction[i].className) {
+                        case "dog":
+                            labelTitle = "Dog"
+                            break;
+                        case "cat":
+                            labelTitle = "Cat"
+                            break;
+                        case "rabbit":
+                            labelTitle = "Rabbit"
+                            break;
+                        case "dragon":
+                            labelTitle = "Dragon"
+                            break;
+                        case "Bear":
+                            labelTitle = "Bear"
+                            break;
+                        case "squirrel":
+                            labelTitle = "Squirrel"
+                            break;
+                        case "fox":
+                            labelTitle = "Fox"
+                            break;
+                        default:
+                            labelTitle = "Anything"
+                    }
+                    var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+                    var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                     var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+                     var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                   
+                    
+                    labelContainer.childNodes[i].innerHTML = label + bar;
+                }
+            }
+
+                //     for (let i = 0; i < maxPredictions; i++) {
+                //         const classPrediction =
+                //             prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+                //         labelContainer.childNodes[i].innerHTML = classPrediction;
+                //     }
+                // }
+        </script>
+    </body>
+
+    <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</html>
